@@ -1,13 +1,17 @@
 Package: investoSim
-Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
-Encoding: UTF-8
+Title: Simulate Basic Investment Strategies
+Version: 0.0.0.9000
+Authors@R: 
+    person("Jaxson", "Pham", email = "jaxsonpham@gmail.com", 
+           role = c("aut", "cre"))
+Description: A lightweight R package to simulate and compare basic investment strategies 
+    such as lump-sum investing and dollar-cost averaging (DCA). The goal of this package 
+    is to help beginner investors, students, or educators visualize how different 
+    approaches to investing can impact long-term portfolio value. Built for educational 
+    purposes and simple experimentation.
+Depends: R (>= 3.1.2)
+Imports: ggplot2, dplyr
+License: CC0
 LazyData: true
 URL: https://github.com/jaxsonpham/investoSim
 BugReports: https://github.com/jaxsonpham/investoSim/issues
