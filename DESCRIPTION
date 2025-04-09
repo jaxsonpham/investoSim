@@ -1,14 +1,16 @@
 Package: investoSim
-Title: Simulate Basic Investment Strategies
+Title: Simulate and Visualize Core Investing Principles
 Version: 0.0.0.9000
 Authors@R: 
     person("Jaxson", "Pham", email = "jaxsonpham@gmail.com", 
            role = c("aut", "cre"))
-Description: A lightweight R package to simulate and compare basic investment strategies 
-    such as lump-sum investing and dollar-cost averaging (DCA). The goal of this package 
-    is to help beginner investors, students, or educators visualize how different 
-    approaches to investing can impact long-term portfolio value. Built for educational 
-    purposes and simple experimentation.
+Description: investoSim is a simple and educational R package designed to help users 
+    understand the impact of foundational investing behaviors such as compounding, 
+    consistent contributions, market timing, and delayed entry. The package provides 
+    lightweight simulations and visualizations of key concepts like lump-sum vs. 
+    dollar-cost averaging (DCA), the cost of missing the best days in the market, 
+    and the long-term effects of waiting to invest. Ideal for students, educators, 
+    or beginner investors seeking clarity, not complexity.
 Depends: R (>= 3.1.2)
 Imports: ggplot2, dplyr
 License: CC0
