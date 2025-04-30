@@ -1,0 +1,125 @@
+---
+title: "investoSim: Function Documentation"
+output: html_document
+---
+
+# investoSim: Function Documentation
+
+The `investoSim` package is a lightweight R toolkit designed to help beginner investors, students, and educators simulate and visualize core investing principles. Rather than predicting returns, `investoSim` emphasizes behavioral and time-based factors such as compounding, consistency, staying invested, and the long-term cost of delays. This document describes the key functions included in the package, with detailed explanations of their purpose, inputs, outputs, and example usage.
+
+------------------------------------------------------------------------
+
+## 📈 Function: `simulate_growth()`
+
+**Purpose:**\
+Simulates the growth of an investment over time using compound interest. The function supports both a one-time lump-sum investment and optional recurring monthly contributions.
+
+**Inputs:**
+
+-   `initial_investment` (`numeric`): The amount initially invested.
+-   `years` (`numeric`): The number of years the investment grows.
+-   `annual_return` (`numeric`): Expected annual return rate (e.g., 0.07 for 7%).
+-   `monthly_contribution` (`numeric`, optional): Amount contributed monthly; default is 0.
+
+**Outputs:**\
+A `data.frame` with time and investment value columns, and a line plot showing portfolio growth over time.
+
+**Example:**
+
+``` r
+simulate_growth(
+  initial_investment = 5000,
+  years = 15,
+  annual_return = 0.06,
+  monthly_contribution = 200
+)
+```
+
+------------------------------------------------------------------------
+
+## 🔄 Function: `compare_strategies()`
+
+**Purpose:**\
+Compares two common strategies—lump-sum investing and dollar-cost averaging (DCA)—over the same period and return assumptions.
+
+**Inputs:**
+
+-   `initial_investment` (`numeric`): The lump-sum amount invested at the start.
+-   `monthly_contribution` (`numeric`): The amount contributed monthly for DCA.
+-   `years` (`numeric`): Duration of the investment in years.
+-   `annual_return` (`numeric`): Annual return rate.
+
+**Outputs:**\
+A plot comparing the growth of both strategies over time and a summary table of final values.
+
+**Example:**
+
+``` r
+compare_strategies(
+  initial_investment = 10000,
+  monthly_contribution = 400,
+  years = 10,
+  annual_return = 0.07
+)
+```
+
+------------------------------------------------------------------------
+
+## ❌ Function: `missed_best_days()`
+
+**Purpose:**\
+Demonstrates the cost of missing the market's best-performing days. This function simulates the effect of removing the top X best return days from a stock or index dataset.
+
+**Inputs:**
+
+-   `price_data` (`data.frame`): A data frame containing historical daily prices.
+-   `n_days` (`numeric`): Number of best days (based on daily returns) to exclude.
+-   `initial_investment` (`numeric`, optional): Starting portfolio value (default: 10000).
+
+**Outputs:**\
+Two final portfolio values: one with all days, and one with the best days removed, plus a comparative line plot.
+
+**Example:**
+
+``` r
+missed_best_days(
+  price_data = my_etf_prices,
+  n_days = 10
+)
+```
+
+------------------------------------------------------------------------
+
+## ⏳ Function: `delayed_start()`
+
+**Purpose:**\
+Compares investing now versus delaying contributions for a specified number of years. This helps demonstrate the opportunity cost of waiting.
+
+**Inputs:**
+
+-   `monthly_contribution` (`numeric`): Amount contributed monthly.
+-   `years` (`numeric`): Total investment duration.
+-   `delay_years` (`numeric`): Number of years to wait before starting.
+-   `annual_return` (`numeric`): Annual return rate.
+
+**Outputs:**\
+A comparison plot showing growth with and without the delay, and a summary of ending portfolio values.
+
+**Example:**
+
+``` r
+delayed_start(
+  monthly_contribution = 250,
+  years = 20,
+  delay_years = 5,
+  annual_return = 0.07
+)
+```
+
+------------------------------------------------------------------------
+
+## 👎 Notes
+
+-   All functions assume compound growth and reinvestment of returns.
+-   Taxes, fees, and inflation are not accounted for to maintain simplicity.
+-   These simulations are intended for **educational purposes only** and are not financial advice.
